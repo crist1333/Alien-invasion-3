@@ -23,12 +23,12 @@ alien_invasion/
 ├── jugador.py             # Clase del jugador (Player)
 ├── enemigo.py             # Clase base y subclases de enemigos
 ├── bala.py                # Clase de disparos
-├── utils.py               # Funciones auxiliares (mostrar texto, menús)
 ├── imagenes/
-│   ├── nave.png           # Imagen de la nave del jugador
+│   ├── jugador.png        # Imagen de la nave del jugador
 │   ├── enemigo1.png       # Tipo de enemigo 1
 │   ├── enemigo2.png       # Tipo de enemigo 2
-│   ├── disparo.png        # Imagen del disparo
+│   ├── enemigo3.png       # Tipo de enemigo 3
+│   ├── bala.png           # Imagen del disparo
 │   └── fondo.jpg          # Imagen de fondo del juego
 ```
 
@@ -57,7 +57,7 @@ alien_invasion/
 
 ## 📦 Requisitos
 
-- Python 3.10+
+- Python 3.10+ (3.12.3 version juego exacta)
 - PyGame 2.6+
 
 Instalación de PyGame:
