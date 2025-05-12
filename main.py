@@ -53,8 +53,12 @@ def mostrar_puntaje():
 # Función del menú de pausa
 def menu_pausa():
     pantalla.fill((0, 0, 0))
-    texto1 = fuente.render("PAUSA - ESC para continuar o Q para salir", True, BLANCO)
-    pantalla.blit(texto1, (150, 250))
+    texto1 = fuente.render("PAUSA", True, BLANCO)
+    texto2 = fuente.render("Presiona ESC para continuar o Q para salir", True, BLANCO)
+    texto3 = fuente.render(f"Score: {puntos} | Disparos: {balas_disparadas} | Naves: {naves_destruidas}", True, BLANCO)
+    pantalla.blit(texto1, (330, 200))
+    pantalla.blit(texto2, (160, 250))
+    pantalla.blit(texto3, (180, 300))
     pygame.display.flip()
 
     en_pausa = True
@@ -70,11 +74,19 @@ def menu_pausa():
                     pygame.quit()
                     sys.exit()
 
-# Menú principal
+# Menú principal con instrucciones
 def mostrar_menu_inicio():
     pantalla.fill((0, 0, 0))
-    texto = fuente.render("Presiona ESPACIO para comenzar", True, BLANCO)
-    pantalla.blit(texto, (250, 280))
+    titulo = fuente.render("Alien Invasion", True, BLANCO)
+    instrucciones1 = fuente.render("Flechas ← → para mover", True, BLANCO)
+    instrucciones2 = fuente.render("ESPACIO para disparar", True, BLANCO)
+    instrucciones3 = fuente.render("ESC para pausar el juego", True, BLANCO)
+    iniciar = fuente.render("Presiona ESPACIO para comenzar", True, BLANCO)
+    pantalla.blit(titulo, (300, 100))
+    pantalla.blit(instrucciones1, (250, 200))
+    pantalla.blit(instrucciones2, (250, 240))
+    pantalla.blit(instrucciones3, (250, 280))
+    pantalla.blit(iniciar, (220, 340))
     pygame.display.flip()
 
     esperando = True
@@ -87,6 +99,7 @@ def mostrar_menu_inicio():
                 if evento.key == pygame.K_SPACE:
                     esperando = False
 
+# Inicia el juego
 mostrar_menu_inicio()
 
 # Bucle principal del juego
